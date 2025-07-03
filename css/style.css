@@ -206,13 +206,12 @@ h1, h2, h3, h4, h5, h6 {
 .btn-secondary {
     background: transparent;
     color: white;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #dc2626;
-    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .hero-image {
@@ -224,19 +223,21 @@ h1, h2, h3, h4, h5, h6 {
 .profile-placeholder {
     width: 300px;
     height: 300px;
+    background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 8rem;
-    color: rgba(255, 255, 255, 0.3);
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* About Section */
 .about {
     padding: 100px 0;
+    background: #f8fafc;
 }
 
 .about-content {
@@ -440,30 +441,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-placeholder {
-    font-size: 4rem;
-    color: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .degree-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .degree-placeholder i {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .degree-placeholder span {
     font-size: 1rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.7);
 }
 
 .project-content {
@@ -471,74 +473,79 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-content h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #2d3748;
-    font-weight: 600;
 }
 
 .project-content p {
-    color: #718096;
-    margin-bottom: 1.5rem;
+    color: #4a5568;
     line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin: 1rem 0;
 }
 
 .tech-tag {
-    background: #edf2f7;
-    color: #4a5568;
-    padding: 0.25rem 0.75rem;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
 .project-links {
     display: flex;
     gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .project-link {
-    color: #dc2626;
-    text-decoration: none;
-    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    transition: color 0.3s ease;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .project-link:hover {
-    color: #ea580c;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
 }
 
-/* Skills Section - New Design */
+/* Skills Section */
 .skills {
     padding: 100px 0;
-    background-color: #f7fafc;
+    background: #f8fafc;
 }
 
 .skills-container {
-    max-width: 1000px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
 }
 
 .skill-category {
-    margin-bottom: 3rem;
+    text-align: center;
 }
 
 .category-title {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: white;
-    text-align: center;
+    color: #2d3748;
     position: relative;
+    color: white;
 }
 
 .category-title::after {
@@ -547,7 +554,7 @@ h1, h2, h3, h4, h5, h6 {
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px;
+    width: 30px;
     height: 3px;
     background: linear-gradient(90deg, #dc2626 0%, #ea580c 100%);
     border-radius: 2px;
@@ -556,40 +563,39 @@ h1, h2, h3, h4, h5, h6 {
 .skill-pills {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
     justify-content: center;
 }
 
 .skill-pill {
+    background: white;
+    color: #2d3748;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    cursor: default;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .skill-pill.technical {
     background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
 }
 
 .skill-pill.tools {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .skill-pill.soft {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 .skill-pill:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Contact Section */
@@ -601,8 +607,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    align-items: start;
 }
 
 .contact-info h3 {
@@ -613,7 +618,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-info p {
     font-size: 1.1rem;
-    color: #718096;
+    color: #4a5568;
     margin-bottom: 2rem;
     line-height: 1.7;
 }
@@ -642,16 +647,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-link {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+    color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
     transition: all 0.3s ease;
 }
 
@@ -675,12 +680,12 @@ h1, h2, h3, h4, h5, h6 {
 .form-group textarea,
 .form-group select {
     width: 100%;
-    padding: 12px 16px;
+    padding: 1rem;
     border: 2px solid #e2e8f0;
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
-    font-family: inherit;
+    background: white;
 }
 
 .form-group input:focus,
@@ -696,12 +701,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-group select {
-    background-color: white;
     cursor: pointer;
 }
 
 .form-group select option {
-    padding: 8px;
+    padding: 0.5rem;
 }
 
 /* Footer */
@@ -730,7 +734,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fade-in-up {
-    animation: fadeInUp 0.6s ease forwards;
+    animation: fadeInUp 0.6s ease-out;
 }
 
 /* Scroll indicator */
@@ -738,43 +742,51 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #dc2626 0%, #ea580c 100%);
+    background: #e2e8f0;
     z-index: 1001;
-    transition: width 0.3s ease;
 }
 
+.scroll-indicator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #dc2626 0%, #ea580c 100%);
+    width: var(--scroll-width, 0%);
+    transition: width 0.1s ease;
+}
+
+/* Projects section specific styles */
 .projects .section-title,
-.contact .section-title {
-    color: #fff !important;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+.skills .section-title {
+    color: #2d3748;
 }
 
 /* Reviews Section */
 .reviews-section {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
 }
 
 .review-card {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 4px solid #dc2626;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .review-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .review-header {
@@ -787,7 +799,6 @@ h1, h2, h3, h4, h5, h6 {
 .stars {
     color: #fbbf24;
     font-size: 1.2rem;
-    font-weight: bold;
 }
 
 .reviewer-name {
@@ -809,10 +820,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
     display: inline-block;
 }
 
+/* Videos Section */
 .videos-section {
     position: relative;
     margin-bottom: 4rem;
@@ -856,7 +868,54 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .videos-section .video-card {
-    min-width: 350px;
-    max-width: 400px;
+    min-width: 400px;
+    max-width: 500px;
     flex-shrink: 0;
+}
+
+/* Mobile-specific overrides for better layout */
+@media (max-width: 767px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-left-photo,
+    .about-right-photo {
+        order: 1;
+        padding-top: 0;
+    }
+    
+    .about-text {
+        order: 2;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .certifications-section::after,
+    .videos-section::after {
+        display: none;
+    }
+    
+    .certifications-section .projects-grid,
+    .videos-section .videos-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        overflow-x: visible;
+    }
+    
+    .certifications-section .project-card,
+    .videos-section .video-card {
+        min-width: auto;
+        max-width: none;
+    }
 } 
